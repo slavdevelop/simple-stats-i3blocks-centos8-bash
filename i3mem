@@ -1,0 +1,10 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+	1) notify-send "$(ps axch -0 cmd:1 5,%mem --sort=%mem | head)" ;;
+
+	2) 
+
+ # esac
+
+free -h | awk '/^Mem:/ {print $3 "/" $2}' 

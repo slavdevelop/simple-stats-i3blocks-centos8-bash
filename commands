@@ -1,0 +1,23 @@
+free -h | awk '/^Mem:/ {print $3 "/" $2}' 
+
+ 4.0Gi/31Gi  -  used memory / total memory
+
+============================================================
+
+sensors | awk '/^temp1/ {print $2}'
+
+show CPU temp
+
+
+===========================================================
+
+ps axch -o cmd:15,%cpu --sort=-%cpu | head
+
+show the hottest CPUs
+
+
+===========================================================
+
+ps axch -o cmd:15,%mem --sort=-%mem | head
+
+show the most used memory processes
